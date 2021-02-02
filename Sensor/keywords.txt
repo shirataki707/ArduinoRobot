@@ -1,0 +1,2 @@
+Sensor	KEYWORD1
+sensing	KEYWORD2
