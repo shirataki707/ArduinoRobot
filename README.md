@@ -1,2 +1,2 @@
-# ArduinoRobotProgram for PBL 2020
+# ArduinoRobotProgram
 ![robot image](res/robot.PNG)
