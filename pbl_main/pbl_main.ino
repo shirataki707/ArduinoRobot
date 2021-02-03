@@ -3,12 +3,9 @@
  * created : 2020/12/15
  * 
  * contents : pbl_main.ino    メインプログラム
- *            pbl_walk.ino  歩行プログラム
+ *            pbl_walk.ino    歩行プログラム
  *            pbl_pk.ino      PK競技用の関数
  *            
- * Library :  Sensor.h        センサクラスのヘッダーファイル
- *            Sensor.cpp      センサクラスのソースファイル
- *            keywords.txt    シンタックスハイライト用テキストファイル
  */
 
 #include <Servo.h>
@@ -16,7 +13,7 @@
 
 Servo sv[4][3];
 Sensor sensorRight(A0), sensorLeft(A1);
-const float STRESHOLD = 60.0; // 距離の閾値
+const float THRESHOLD = 60.0; // 距離の閾値
 // ピン番号
 const int MOTORPIN[4][3] = {{2, 3, 4}, 
                             {5, 6, 7},
@@ -55,11 +52,11 @@ void loop() {
  
   /*
   // PK競技
-  if(sensorLeft.sensing() < STRESHOLD) {
+  if(sensorLeft.sensing() < THRESHOLD) {
     defendLeft(); 
   }
   // 右前方のセンシング
-  else if(sensorRight.sensing() < STRESHOLD) {
+  else if(sensorRight.sensing() < THRESHOLD) {
     defendRight(); 
   }
   // else の場合は静止
